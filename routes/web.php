@@ -82,3 +82,8 @@ Route::post('/task',  function () use($tasklist) {
     $tasklist[request()->label]=request()->task;
     return $tasklist;
 });
+
+Route::put('/task/{key}', function ($key) use($tasklist) {
+    $tasklist[$key]=request()->task;
+    return $tasklist;
+});
