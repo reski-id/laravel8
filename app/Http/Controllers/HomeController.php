@@ -16,9 +16,9 @@ class HomeController extends Controller
         return view('about');
     }
 
-    public function karya()
+    public function portofolio()
     {
-        return view('karya');
+        return view('portofolio');
     }
 
     public function sertifikat()
