@@ -24,5 +24,5 @@ Route::get('/sertifikat', [HomeController::class, 'sertifikat']);
 Route::post('/task', [TaskController::class, 'store']);
 Route::get('/task', [TaskController::class, 'index']);
 Route::get('/task/{param}', [TaskController::class, 'show']);
-Route::put('/task/{param}', [TaskController::class, 'edit']);//
+Route::put('/task/{param}', [TaskController::class, 'edit']);
 Route::delete('/task/{param}', [TaskController::class, 'delete']);
