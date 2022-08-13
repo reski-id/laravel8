@@ -16,3 +16,31 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/about', function () {
+    return view('about');
+});
+
+Route::get('/hello', function () {
+    $dataarray=[
+        'ID'=>1,
+        'user'=>'batman',
+        'gender'=>'male',
+        'message'=>'hello',
+
+    ];
+
+    return response()->json($dataarray,200);
+});
+
+Route::get('/debug', function () {
+    $dataarray=[
+        'ID'=>1,
+        'user'=>'batman',
+        'gender'=>'male',
+        'message'=>'hello',
+
+    ];
+
+    dd($dataarray);
+});
