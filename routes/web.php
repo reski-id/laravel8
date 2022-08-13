@@ -87,3 +87,10 @@ Route::put('/task/{key}', function ($key) use($tasklist) {
     $tasklist[$key]=request()->task;
     return $tasklist;
 });
+
+Route::delete('/task/{key}', function ($key) use($tasklist) {
+    unset($tasklist[$key]);
+    return $tasklist;
+});
+
+
