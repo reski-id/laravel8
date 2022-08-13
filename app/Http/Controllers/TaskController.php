@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 
 class TaskController extends Controller
@@ -71,19 +72,16 @@ class TaskController extends Controller
         return $tasklist;
     }
 
-    public function store()
+    //save to db
+    public function store(Request $request)
     {
-        $tasklist = [
-            1 => 'sleep',
-            2 => 'work',
-            3 => 'eat',
-            4 => 'coding',
-            5 => 'study',
-        ];
-        $tasklist[request()->label]=request()->task;
-        return $tasklist;
-    }
 
+        DB::table('task')->insert([
+            'task'=>$request->task,
+            'created_at'=> now(),
+        ]);
+        return response()->json("Insert data Success", 200);
+    }
 
 
 }
