@@ -20,6 +20,43 @@ use App\Http\Controllers\CourseCategController;
 |
 */
 
+//crud course
+Route::post('/course', [CourseController::class, 'store']);
+Route::get('/course', [CourseController::class, 'index']);
+Route::get('/course/{id}', [CourseController::class, 'show']);
+Route::put('/course/{id}', [CourseController::class, 'edit']);
+Route::delete('/course/{id}', [CourseController::class, 'destroy']);
+
+//crud course category
+Route::post('/category', [CourseCategController::class, 'store']);
+Route::get('/category', [CourseCategController::class, 'index']);
+Route::get('/category/{id}', [CourseCategController::class, 'show']);
+Route::put('/category/{id}', [CourseCategController::class, 'edit']);
+Route::delete('/category/{id}', [CourseCategController::class, 'destroy']);
+
+//crud programing language
+Route::post('/codelanguage', [ProgrammingController::class, 'store']);
+Route::get('/codelanguage', [ProgrammingController::class, 'index']);
+Route::get('/codelanguage/{id}', [ProgrammingController::class, 'show']);
+Route::put('/codelanguage/{id}', [ProgrammingController::class, 'edit']);
+Route::delete('/codelanguage/{id}', [ProgrammingController::class, 'delete']);
+
+//crud sertifikat
+Route::post('/sertifikat', [SertifikatController::class, 'store']);
+Route::get('/sertifikat', [SertifikatController::class, 'index']);
+Route::get('/sertifikat/{id}', [SertifikatController::class, 'show']);
+Route::put('/sertifikat/{id}', [SertifikatController::class, 'edit']);
+Route::delete('/sertifikat/{id}', [SertifikatController::class, 'destroy']);
+
+//crud portofolio
+Route::post('/projects', [PortofolioController::class, 'store']);
+Route::get('/projects', [PortofolioController::class, 'index']);
+Route::get('/projects/{id}', [PortofolioController::class, 'show']);
+Route::put('/projects/{id}', [PortofolioController::class, 'edit']);
+Route::delete('/projects/{id}', [PortofolioController::class, 'destroy']);
+
+
+//pages controller
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/about', [HomeController::class, 'about']);
 Route::get('/portofolio', [HomeController::class, 'portofolio']);
@@ -31,14 +68,4 @@ Route::get('/task/{id}', [TaskController::class, 'show']);
 Route::put('/task/{id}', [TaskController::class, 'edit']);
 Route::delete('/task/{id}', [TaskController::class, 'destroy']);
 
-Route::post('/program', [ProgrammingController::class, 'store']);
-Route::get('/program', [ProgrammingController::class, 'index']);
-Route::get('/program/{param}', [ProgrammingController::class, 'show']);
-Route::put('/program/{param}', [ProgrammingController::class, 'edit']);
-Route::delete('/program/{param}', [ProgrammingController::class, 'delete']);
 
-Route::post('/sertifikat', [SertifikatController::class, 'store']);
-Route::get('/sertifikat', [SertifikatController::class, 'index']);
-Route::get('/sertifikat/{id}', [SertifikatController::class, 'show']);
-Route::put('/sertifikat/{id}', [SertifikatController::class, 'edit']);
-Route::delete('/sertifikat/{id}', [SertifikatController::class, 'destroy']);
