@@ -10,4 +10,12 @@ class Course extends Model
     use HasFactory;
 
     protected $table ='courses';
+
+    protected $fillable = [
+        'finish_years',
+        'course',
+        'lembaga',
+        'link_sertifikat',
+        'kategory_course',
+    ];
 }

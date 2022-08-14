@@ -21,25 +21,25 @@ use App\Http\Controllers\CourseCategController;
 */
 
 //crud course
-Route::post('/course', [CourseController::class, 'store']);
 Route::get('/course', [CourseController::class, 'index']);
+Route::post('/course', [CourseController::class, 'store']);
 Route::get('/course/{id}', [CourseController::class, 'show']);
 Route::put('/course/{id}', [CourseController::class, 'edit']);
 Route::delete('/course/{id}', [CourseController::class, 'destroy']);
 
 //crud course category
-Route::post('/category', [CourseCategController::class, 'store']);
 Route::get('/category', [CourseCategController::class, 'index']);
+Route::post('/category', [CourseCategController::class, 'store']);
 Route::get('/category/{id}', [CourseCategController::class, 'show']);
 Route::put('/category/{id}', [CourseCategController::class, 'edit']);
 Route::delete('/category/{id}', [CourseCategController::class, 'destroy']);
 
 //crud programing language
-Route::post('/codelanguage', [ProgrammingController::class, 'store']);
-Route::get('/codelanguage', [ProgrammingController::class, 'index']);
-Route::get('/codelanguage/{id}', [ProgrammingController::class, 'show']);
-Route::put('/codelanguage/{id}', [ProgrammingController::class, 'edit']);
-Route::delete('/codelanguage/{id}', [ProgrammingController::class, 'delete']);
+Route::get('/code', [ProgrammingController::class, 'index']);
+Route::post('/code', [ProgrammingController::class, 'store']);
+Route::get('/code/{id}', [ProgrammingController::class, 'show']);
+Route::put('/code/{id}', [ProgrammingController::class, 'edit']);
+Route::delete('/code/{id}', [ProgrammingController::class, 'destroy']);
 
 //crud sertifikat
 Route::post('/sertifikat', [SertifikatController::class, 'store']);
@@ -49,15 +49,15 @@ Route::put('/sertifikat/{id}', [SertifikatController::class, 'edit']);
 Route::delete('/sertifikat/{id}', [SertifikatController::class, 'destroy']);
 
 //crud portofolio
-Route::post('/projects', [PortofolioController::class, 'store']);
 Route::get('/projects', [PortofolioController::class, 'index']);
+Route::post('/projects', [PortofolioController::class, 'store']);
 Route::get('/projects/{id}', [PortofolioController::class, 'show']);
 Route::put('/projects/{id}', [PortofolioController::class, 'edit']);
 Route::delete('/projects/{id}', [PortofolioController::class, 'destroy']);
 
 
 //pages controller
-// Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index']);
 // Route::get('/about', [HomeController::class, 'about']);
 // Route::get('/portofolio', [HomeController::class, 'portofolio']);
 // Route::get('/sertifikat', [HomeController::class, 'sertifikat']);

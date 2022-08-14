@@ -6,7 +6,6 @@ use App\Models\Sertifikat;
 
 use Illuminate\Http\Request;
 
-use Illuminate\Support\Facades\DB;
 
 class SertifikatController extends Controller
 {

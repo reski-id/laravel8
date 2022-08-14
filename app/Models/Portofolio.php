@@ -10,6 +10,14 @@ class Portofolio extends Model
     use HasFactory;
 
     protected $table ='portofolio';
+
+    protected $fillable = [
+        'proj_name',
+        'proj_link',
+        'proj_kategory',
+        'programming_language',
+    ];
+
 }
 
 

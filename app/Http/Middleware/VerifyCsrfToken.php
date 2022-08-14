@@ -16,6 +16,15 @@ class VerifyCsrfToken extends Middleware
         '/task/*',
         '/sertifikat',
         '/sertifikat/*',
+        '/code',
+        '/code/*',
+        '/course',
+        '/course/*',
+        '/category',
+        '/category/*',
+        '/projects',
+        '/projects/*',
+
 
     ];
 }

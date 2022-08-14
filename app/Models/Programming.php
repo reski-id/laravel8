@@ -10,4 +10,8 @@ class Programming extends Model
     use HasFactory;
 
     protected $table ='programming';
+
+    protected $fillable = [
+        'name',
+    ];
 }
