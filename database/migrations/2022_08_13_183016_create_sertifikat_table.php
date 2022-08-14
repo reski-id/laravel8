@@ -15,12 +15,13 @@ class CreateSertifikatTable extends Migration
     {
         Schema::create('sertifikat', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 50);
-            $table->string('lembaga', 50);
-            $table->dateTime('waktu');
-            $table->dateTime('sampai');
-            $table->string('link', 250);
+            $table->string('name', 50)->nullable();
+            $table->string('lembaga', 50)->nullable();
+            $table->dateTime('waktu')->nullable();
+            $table->dateTime('sampai')->nullable();
+            $table->string('link', 250)->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

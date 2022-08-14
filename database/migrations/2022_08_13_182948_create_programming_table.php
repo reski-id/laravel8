@@ -17,6 +17,7 @@ class CreateProgrammingTable extends Migration
             $table->id();
             $table->string('name',25);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

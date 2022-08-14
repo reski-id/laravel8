@@ -19,8 +19,9 @@ class CreateCoursesTable extends Migration
             $table->string('course', 50);
             $table->string('lembaga', 50);
             $table->string('link_sertifikat',200);
-            $table->bigInteger('kategory_course')->nullable()->default(12);
+            $table->bigInteger('kategory_course')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

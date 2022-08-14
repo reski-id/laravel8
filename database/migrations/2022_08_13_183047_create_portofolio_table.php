@@ -20,6 +20,7 @@ class CreatePortofolioTable extends Migration
             $table->string('proj_kategory', 25);
             $table->bigInteger('programming_language');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

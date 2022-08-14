@@ -17,6 +17,7 @@ class CreateCoursesKategoryTable extends Migration
             $table->id();
             $table->string('kategory',50);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

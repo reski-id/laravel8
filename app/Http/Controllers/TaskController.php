@@ -8,68 +8,39 @@ use Illuminate\Support\Facades\DB;
 
 class TaskController extends Controller
 {
-
-    public $tasklist = [
-        1 => 'sleep',
-        2 => 'work',
-        3 => 'eat',
-        4 => 'coding',
-        5 => 'study',
-    ];
-
-    public function index()
+    //get data using Query Builder
+    public function index(Request $request)
     {
-
-        $tasklist = [
-            1 => 'sleep',
-            2 => 'work',
-            3 => 'eat',
-            4 => 'coding',
-            5 => 'study',
-        ];
-
         if (request()->search) {
-            return $tasklist[request()->search];
+            $tasklist = DB::table('task')
+            ->where('task', 'LIKE',"%$request->search%")
+            ->get();
+            return $tasklist;
         }
+        $tasklist = DB::table('task')->get();
         return $tasklist;
     }
 
-    public function show($param)
+    //get data by id
+    public function show($id)
     {
-        $tasklist = [
-            1 => 'sleep',
-            2 => 'work',
-            3 => 'eat',
-            4 => 'coding',
-            5 => 'study',
-        ];
-        return $tasklist[$param];
-    }
-
-    public function edit($param)
-    {
-        $tasklist = [
-            1 => 'sleep',
-            2 => 'work',
-            3 => 'eat',
-            4 => 'coding',
-            5 => 'study',
-        ];
-        $tasklist[$param]=request()->task;
+        $tasklist = DB::table('task')->where('id',$id)->first();
         return $tasklist;
     }
 
-    public function delete($param)
+    public function edit(Request $request, $id)
     {
-        $tasklist = [
-            1 => 'sleep',
-            2 => 'work',
-            3 => 'eat',
-            4 => 'coding',
-            5 => 'study',
-        ];
-        unset($tasklist[$param]);
-        return $tasklist;
+        $tasklist = DB::table('task')->where('id',$id)->update([
+            'task' => $request->task,
+            'updated_at' => now(),
+        ]);
+        return response()->json('Update Success', 200);;
+    }
+
+    public function destroy($id)
+    {
+        DB::table('task')->where('id',$id)->delete();
+        return response()->json('Delete Success', 200);;
     }
 
     //save to db
