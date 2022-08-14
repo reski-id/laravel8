@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Sertifikat extends Model
 {
     use HasFactory;
+
+    protected $table ='sertifikat';
+
+    protected $fillable = [
+        'name',
+        'lembaga',
+        'waktu',
+        'sampai',
+        'link',
+    ];
 }

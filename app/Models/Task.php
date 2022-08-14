@@ -10,6 +10,9 @@ class Task extends Model
     use HasFactory;
 
     protected $table ='task';
-    // protected $fillable = []; //boleh diisi masal
+
+    protected $fillable = [
+        'task',
+    ]; //boleh diisi masal
     // protected $guarded =[]; //tidak boleh diisi
 }

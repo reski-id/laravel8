@@ -57,10 +57,10 @@ Route::delete('/projects/{id}', [PortofolioController::class, 'destroy']);
 
 
 //pages controller
-Route::get('/', [HomeController::class, 'index']);
-Route::get('/about', [HomeController::class, 'about']);
-Route::get('/portofolio', [HomeController::class, 'portofolio']);
-Route::get('/sertifikat', [HomeController::class, 'sertifikat']);
+// Route::get('/', [HomeController::class, 'index']);
+// Route::get('/about', [HomeController::class, 'about']);
+// Route::get('/portofolio', [HomeController::class, 'portofolio']);
+// Route::get('/sertifikat', [HomeController::class, 'sertifikat']);
 
 Route::post('/task', [TaskController::class, 'store']);
 Route::get('/task', [TaskController::class, 'index']);
