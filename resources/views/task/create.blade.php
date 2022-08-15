@@ -18,6 +18,9 @@
                 <div class="mb-3">
                     <label for="" class="form-label">To Do</label>
                     <textarea class="form-control" id="task" name="task" rows="3"></textarea>
+                    @error('task')
+                        <span class="text-danger">{{$message}}</span>
+                    @enderror
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>

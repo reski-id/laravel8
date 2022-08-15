@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\api;
 use App\Models\Programming;
 use Illuminate\Http\Request;
 
-class ProgrammingController extends Controller
+class ProgrammingControllerAPI extends Controller
 {
     public function index(Request $request)
     {
