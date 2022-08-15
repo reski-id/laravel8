@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 
-class TaskController extends Controller
+class TaskControllerAPI extends Controller
 {
     //get data using Eloquent
     public function index(Request $request)
@@ -17,9 +17,7 @@ class TaskController extends Controller
             return $tasklist;
         }
         $tasklist = Task::all();
-        return view('task.index', [
-            'data' => $tasklist
-        ]);
+        return $tasklist;
     }
 
     //get data by id
@@ -55,17 +53,5 @@ class TaskController extends Controller
         $tasklist->delete();
 
         return response()->json('Delete Success', 200);
-    }
-
-
-    //form
-    public function create_task()
-    {
-        return view('task.create');
-    }
-
-    public function edit_task($id)
-    {
-        return view('task.edit');
     }
 }

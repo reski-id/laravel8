@@ -4,7 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\TaskController;
+use App\Http\Controllers\TaskControllerAPI;
 use App\Http\Controllers\SertifikatController;
 use App\Http\Controllers\ProgrammingController;
 use App\Http\Controllers\PortofolioController;
@@ -63,8 +63,8 @@ Route::delete('/projects/{id}', [PortofolioController::class, 'destroy']);
 
 
 
-Route::post('/task', [TaskController::class, 'store']);
-Route::get('/task', [TaskController::class, 'index']);
-Route::get('/task/{id}', [TaskController::class, 'show']);
-Route::put('/task/{id}', [TaskController::class, 'edit']);
-Route::delete('/task/{id}', [TaskController::class, 'destroy']);
+Route::post('/task', [TaskControllerAPI::class, 'store']);
+Route::get('/task', [TaskControllerAPI::class, 'index']);
+Route::get('/task/{id}', [TaskControllerAPI::class, 'show']);
+Route::put('/task/{id}', [TaskControllerAPI::class, 'edit']);
+Route::delete('/task/{id}', [TaskControllerAPI::class, 'destroy']);
