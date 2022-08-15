@@ -16,12 +16,11 @@ class TaskController extends Controller
             $tasklist = Task::where('task', 'LIKE',"%$request->search%")->paginate(3);
             return $tasklist;
         }
-        $tasklist = Task::paginate(3);
+        $tasklist = Task::select("*")->orderByDesc("id")->paginate(3);
         return view('task.index', [
             'data' => $tasklist
         ]);
     }
-
     //get data by id
     public function show($id)
     {
@@ -35,7 +34,7 @@ class TaskController extends Controller
         Task::create([
             'task'=>$request->task,
         ]);
-        return response()->json("Insert data Success", 200);
+    return redirect('/task');
     }
 
     public function edit(Request $request, $id)
@@ -45,7 +44,7 @@ class TaskController extends Controller
         $tasklist->update([
             'task' => $request->task,
         ]);
-        return $tasklist;
+        return redirect('task');
     }
 
     public function destroy($id)
@@ -54,7 +53,7 @@ class TaskController extends Controller
 
         $tasklist->delete();
 
-        return response()->json('Delete Success', 200);
+        return redirect('task');
     }
 
 
@@ -66,6 +65,7 @@ class TaskController extends Controller
 
     public function edit_task($id)
     {
-        return view('task.edit');
+        $tasklist = Task::find($id);
+        return view('task.edit', compact('tasklist'));
     }
 }
