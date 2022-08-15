@@ -3,13 +3,13 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\TaskControllerAPI;
-use App\Http\Controllers\SertifikatController;
-use App\Http\Controllers\ProgrammingController;
-use App\Http\Controllers\PortofolioController;
-use App\Http\Controllers\CourseController;
-use App\Http\Controllers\CourseCategController;
+use App\Http\Controllers\api\HomeControllerAPI;
+use App\Http\Controllers\api\TaskControllerAPI;
+use App\Http\Controllers\api\SertifikatControllerAPI;
+use App\Http\Controllers\api\ProgrammingControllerAPI;
+use App\Http\Controllers\api\PortofolioControllerAPI;
+use App\Http\Controllers\api\CourseControllerAPI;
+use App\Http\Controllers\api\CourseCategControllerAPI;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,41 +27,39 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 //crud course
-Route::get('/course', [CourseController::class, 'index']);
-Route::post('/course', [CourseController::class, 'store']);
-Route::get('/course/{id}', [CourseController::class, 'show']);
-Route::put('/course/{id}', [CourseController::class, 'edit']);
-Route::delete('/course/{id}', [CourseController::class, 'destroy']);
+Route::get('/course', [CourseControllerAPI::class, 'index']);
+Route::post('/course', [CourseControllerAPI::class, 'store']);
+Route::get('/course/{id}', [CourseControllerAPI::class, 'show']);
+Route::put('/course/{id}', [CourseControllerAPI::class, 'edit']);
+Route::delete('/course/{id}', [CourseControllerAPI::class, 'destroy']);
 
 //crud course category
-Route::get('/category', [CourseCategController::class, 'index']);
-Route::post('/category', [CourseCategController::class, 'store']);
-Route::get('/category/{id}', [CourseCategController::class, 'show']);
-Route::put('/category/{id}', [CourseCategController::class, 'edit']);
-Route::delete('/category/{id}', [CourseCategController::class, 'destroy']);
+Route::get('/category', [CourseCategControllerAPI::class, 'index']);
+Route::post('/category', [CourseCategControllerAPI::class, 'store']);
+Route::get('/category/{id}', [CourseCategControllerAPI::class, 'show']);
+Route::put('/category/{id}', [CourseCategControllerAPI::class, 'edit']);
+Route::delete('/category/{id}', [CourseCategControllerAPI::class, 'destroy']);
 
 //crud programing language
-Route::get('/code', [ProgrammingController::class, 'index']);
-Route::post('/code', [ProgrammingController::class, 'store']);
-Route::get('/code/{id}', [ProgrammingController::class, 'show']);
-Route::put('/code/{id}', [ProgrammingController::class, 'edit']);
-Route::delete('/code/{id}', [ProgrammingController::class, 'destroy']);
+Route::get('/code', [ProgrammingControllerAPI::class, 'index']);
+Route::post('/code', [ProgrammingControllerAPI::class, 'store']);
+Route::get('/code/{id}', [ProgrammingControllerAPI::class, 'show']);
+Route::put('/code/{id}', [ProgrammingControllerAPI::class, 'edit']);
+Route::delete('/code/{id}', [ProgrammingControllerAPI::class, 'destroy']);
 
 //crud sertifikat
-Route::post('/sertifikat', [SertifikatController::class, 'store']);
-Route::get('/sertifikat', [SertifikatController::class, 'index']);
-Route::get('/sertifikat/{id}', [SertifikatController::class, 'show']);
-Route::put('/sertifikat/{id}', [SertifikatController::class, 'edit']);
-Route::delete('/sertifikat/{id}', [SertifikatController::class, 'destroy']);
+Route::post('/sertifikat', [SertifikatControllerAPI::class, 'store']);
+Route::get('/sertifikat', [SertifikatControllerAPI::class, 'index']);
+Route::get('/sertifikat/{id}', [SertifikatControllerAPI::class, 'show']);
+Route::put('/sertifikat/{id}', [SertifikatControllerAPI::class, 'edit']);
+Route::delete('/sertifikat/{id}', [SertifikatControllerAPI::class, 'destroy']);
 
 //crud portofolio
-Route::get('/projects', [PortofolioController::class, 'index']);
-Route::post('/projects', [PortofolioController::class, 'store']);
-Route::get('/projects/{id}', [PortofolioController::class, 'show']);
-Route::put('/projects/{id}', [PortofolioController::class, 'edit']);
-Route::delete('/projects/{id}', [PortofolioController::class, 'destroy']);
-
-
+Route::get('/projects', [PortofolioControllerAPI::class, 'index']);
+Route::post('/projects', [PortofolioControllerAPI::class, 'store']);
+Route::get('/projects/{id}', [PortofolioControllerAPI::class, 'show']);
+Route::put('/projects/{id}', [PortofolioControllerAPI::class, 'edit']);
+Route::delete('/projects/{id}', [PortofolioControllerAPI::class, 'destroy']);
 
 Route::post('/task', [TaskControllerAPI::class, 'store']);
 Route::get('/task', [TaskControllerAPI::class, 'index']);
