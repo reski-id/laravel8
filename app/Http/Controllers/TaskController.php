@@ -13,10 +13,10 @@ class TaskController extends Controller
     public function index(Request $request)
     {
         if (request()->search) {
-            $tasklist = Task::where('task', 'LIKE',"%$request->search%")->get();
+            $tasklist = Task::where('task', 'LIKE',"%$request->search%")->paginate(3);
             return $tasklist;
         }
-        $tasklist = Task::all();
+        $tasklist = Task::paginate(3);
         return view('task.index', [
             'data' => $tasklist
         ]);

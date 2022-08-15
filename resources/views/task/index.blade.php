@@ -19,5 +19,7 @@
         </div>
     </div>
     @endforeach
+    <br>
+    {{$data->links('pagination::bootstrap-4')}}
 </div>
 @endsection
