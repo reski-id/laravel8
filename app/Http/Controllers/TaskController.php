@@ -54,4 +54,16 @@ class TaskController extends Controller
 
         return response()->json('Delete Success', 200);
     }
+
+
+    //form
+    public function create_task()
+    {
+        return view('task.create');
+    }
+
+    public function edit_task($id)
+    {
+        return view('task.edit');
+    }
 }

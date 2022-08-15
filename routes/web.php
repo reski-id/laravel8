@@ -68,4 +68,7 @@ Route::get('/task/{id}', [TaskController::class, 'show']);
 Route::put('/task/{id}', [TaskController::class, 'edit']);
 Route::delete('/task/{id}', [TaskController::class, 'destroy']);
 
+//insert data form
+Route::get('/todo/create', [TaskController::class, 'create_task']);
+Route::get('/todo/{id}/edit', [TaskController::class, 'edit_task']);
 
