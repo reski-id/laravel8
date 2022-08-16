@@ -27,4 +27,12 @@ class TaskRequest extends FormRequest
                 'task' => ['required'],
         ];
     }
+
+    public function messages()
+    {
+    return[
+        'required' => 'isian :attribute harus diisi',
+        // 'user.required' => 'nama pengguna harus diisi',
+    ];
+    }
 }
