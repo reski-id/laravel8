@@ -18,7 +18,7 @@
                 @csrf
                 <div class="mb-3">
                     <label for="" class="form-label">Edit </label>
-                    <textarea class="form-control" id="task" name="task" rows="3">{{$tasklist->task}}</textarea>
+                    <textarea class="form-control" id="task" name="task" rows="3">{{old('task',$tasklist->task)}}</textarea>
                     @error('task')
                         <span class="text-danger">{{$message}}</span>
                     @enderror
