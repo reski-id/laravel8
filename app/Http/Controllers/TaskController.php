@@ -10,6 +10,11 @@ use Illuminate\Support\Facades\DB;
 
 class TaskController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     //get data using Eloquent
     public function index(Request $request)
     {
