@@ -6,6 +6,13 @@ use Illuminate\Http\Request;
 
 class ProgrammingController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('verified');
+        $this->middleware('is_Admin');
+    }
+
     public function index(Request $request)
     {
 

@@ -41,7 +41,10 @@ Route::get('/code/{id}', [ProgrammingController::class, 'show']);
 Route::put('/code/{id}', [ProgrammingController::class, 'edit']);
 Route::delete('/code/{id}', [ProgrammingController::class, 'destroy']);
 
-//crud sertifikat
+//form sertifikat
+Route::get('/sertifikat/create', [SertifikatController::class, 'form_create']);
+Route::get('/sertifikat/{id}/edit', [SertifikatController::class, 'form_edit']);
+
 Route::post('/sertifikat', [SertifikatController::class, 'store']);
 Route::get('/sertifikat', [SertifikatController::class, 'index']);
 Route::get('/sertifikat/{id}', [SertifikatController::class, 'show']);

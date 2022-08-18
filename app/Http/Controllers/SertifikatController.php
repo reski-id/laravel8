@@ -9,6 +9,25 @@ use Illuminate\Http\Request;
 
 class SertifikatController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('verified');
+        $this->middleware('is_Admin');
+    }
+
+    //form
+    public function form_create()
+    {
+        return view('sertifikat.create');
+    }
+
+    public function form_edit($id)
+    {
+        $tasklist = Task::find($id);
+        return view('sertifikat.edit', compact('tasklist'));
+    }
+
     public function index(Request $request)
     {
 
@@ -17,12 +36,16 @@ class SertifikatController extends Controller
             ->get();
             return $serti;
         }
-        $serti = Sertifikat::all();
-        return $serti;
+
+        $serti = Sertifikat::select("*")->orderByDesc("id")->paginate(3);
+        return view('sertifikat.index', [
+            'data' => $serti,
+        ]);
     }
 
     public function Store(Request $request)
     {
+        // $serti = $request->all();
         Sertifikat::create([
             'name'=>$request->name,
             'lembaga'=>$request->lembaga,
@@ -30,7 +53,7 @@ class SertifikatController extends Controller
             'sampai'=>$request->sampai,
             'link'=>$request->link,
         ]);
-        return response()->json("Insert data Success", 200);
+        return redirect('/sertifikat');
     }
 
     public function show($id)
