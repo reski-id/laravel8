@@ -41,5 +41,20 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="{{asset('guest/js/scripts.js')}}"></script>
+        {{-- <script src="assets/pspdfkit.js"></script> --}}
+        {{-- <script src="{{asset('guest/assets/pdf/dist/pspdfkit.js')}}"></script>
+        <script>
+            PSPDFKit.load({
+                disableWebAssemblyStreaming: true,
+                container: "#pspdfkit",
+                document: "bb.pdf"
+            })
+            .then(function(instance) {
+                console.log("PSPDFKit loaded", instance);
+            })
+            .catch(function(error) {
+                console.error(error.message);
+            });
+        </script> --}}
     </body>
 </html>

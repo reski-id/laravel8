@@ -17,7 +17,6 @@ class HomeController extends Controller
         $course = Course :: all();
 
         $porto = Portofolio ::all();
-        // $porto = Portofolio::select("*")->orderByDesc("id")->paginate(1);
 
         return view('welcome', compact('certi','course', 'porto'));
     }

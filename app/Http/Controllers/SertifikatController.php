@@ -52,6 +52,8 @@ class SertifikatController extends Controller
             'waktu'=>$request->waktu,
             'sampai'=>$request->sampai,
             'link'=>$request->link,
+            'file'=>$request->file,
+
         ]);
         return redirect('/sertifikat');
     }

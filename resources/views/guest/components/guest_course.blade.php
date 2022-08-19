@@ -9,10 +9,6 @@
                     <a href="{{$item->link_sertifikat}}" target="_blank" rel="noopener noreferrer">Certificate Link</a>
                 </li>
             @endforeach
-            {{-- <li>
-                <a href="https://www.codepolitan.com/c/BRMCJLZ" target="_blank" rel="noopener noreferrer"> <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                    Laravel - CodePolitan</a>
-            </li> --}}
         </ul>
     </div>
 </section>
