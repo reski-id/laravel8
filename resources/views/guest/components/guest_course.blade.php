@@ -1,15 +1,18 @@
 <section class="resume-section" id="course">
     <div class="resume-section-content">
-        <h2 class="mb-5">Certifications</h2>
+        <h2 class="mb-5">Finish Course</h2>
         <ul class="fa-ul mb-0">
-            <li>
-                <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                Google Analytics Certified Developer
-            </li>
-            <li>
+            @foreach ($course as $item)
+                <li>
+                    <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                    <strong>{{$item->course}}</strong> from {{$item->lembaga}} at {{$item->finish_years}} <br>
+                    <a href="{{$item->link_sertifikat}}" target="_blank" rel="noopener noreferrer">Certificate Link</a>
+                </li>
+            @endforeach
+            {{-- <li>
                 <a href="https://www.codepolitan.com/c/BRMCJLZ" target="_blank" rel="noopener noreferrer"> <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
                     Laravel - CodePolitan</a>
-            </li>
+            </li> --}}
         </ul>
     </div>
 </section>

@@ -4,11 +4,22 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Sertifikat;
+use App\Models\Course;
+use App\Models\Portofolio;
+
 class HomeController extends Controller
 {
     public function index()
     {
-        return view('welcome');
+        $certi = Sertifikat :: all();
+
+        $course = Course :: all();
+
+        $porto = Portofolio ::all();
+        // $porto = Portofolio::select("*")->orderByDesc("id")->paginate(1);
+
+        return view('welcome', compact('certi','course', 'porto'));
     }
 
     public function about()

@@ -3,19 +3,19 @@
                     <h2 class="mb-5">Experience</h2>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">Web Developer</h3>
-                            <div class="subheading mb-3">Company 1</div>
-                            <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+                            <h3 class="mb-0">Full Stack</h3>
+                            <div class="subheading mb-3">KEK VILLA BATAM (E-COMMERCE)</div>
+                            <p>Design and create systems according to client requests, manage and develop ongoing applications to suit the company's requests</p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">March 2013 - Present</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary"></span></div>
                     </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">Web Design Intern</h3>
-                            <div class="subheading mb-3">Shout! Media Productions</div>
-                            <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
+                            <h3 class="mb-0">Programmer</h3>
+                            <div class="subheading mb-3">Rezky Bima Cipka Consultan</div>
+                            <p>work closely with other programmers to design and create systems according to client requests</p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">September 2008 - June 2010</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary"></span></div>
                     </div>
                 </div>
             </section>

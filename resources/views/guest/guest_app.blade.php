@@ -32,6 +32,8 @@
             @include('guest.components.guest_interests');
             <!-- course-->
             @include('guest.components.guest_course');
+            <!-- projects-->
+            @include('guest.components.guest_project');
             <!-- Certi-->
             @include('guest.components.guest_certificate');
         </div>
