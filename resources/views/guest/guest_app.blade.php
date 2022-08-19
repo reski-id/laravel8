@@ -15,8 +15,7 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{{asset('guest/css/styles.css')}}" rel="stylesheet" />
     </head>
-    <body id="page-top">
-
+    <body id="page-top" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;' ondragstart='return false' onselectstart='return false' style='-moz-user-select: none; cursor: default;'>
     @include('guest.components.guest_navbar');
         <!-- Page Content-->
         <div class="container-fluid p-0">
