@@ -13,12 +13,13 @@
         <p class="lead mb-5">
             I have experience in building applications using clean architecture and unit testing,.</p>
             <p>
-                <a target=”_blank” href="{{asset('sertificate.pdf')}}"> <button class="btn btn-success"> Get My CV</button></p>
+                <a target=”_blank” href="{{asset('sertificate.pdf')}}"> <button class="btn btn-success"> Get My CV <i class="fa fa-download" aria-hidden="true"></i></button></p>
             <br>
         <div class="social-icons">
             <a class="social-icon" href="#!" target=”_blank”><i class="fab fa-linkedin-in"></i></a>
             <a class="social-icon" href="https://github.com/reski-id" target=”_blank”><i class="fab fa-github"></i></a>
             <a class="social-icon" href="https://t.me/reski_id" target=”_blank”><i class="fab fa-telegram"></i></a>
+            <a class="social-icon" href="whatsapp://send?text=Hello&phone=+6281268501104" target=”_blank”><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
         </div>
     </div>
 </section>

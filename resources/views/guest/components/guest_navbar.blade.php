@@ -11,9 +11,9 @@
             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#course">Course</a></li>
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#certificate">Certificate</a></li>
             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#certificate">Certificate</a></li>
         </ul>
     </div>
 </nav>

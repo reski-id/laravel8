@@ -27,12 +27,12 @@
             @include('guest.components.guest_education');
             <!-- Skills-->
             @include('guest.components.guest_skills');
-            <!-- Interests-->
-            @include('guest.components.guest_interests');
             <!-- course-->
             @include('guest.components.guest_course');
             <!-- projects-->
             @include('guest.components.guest_project');
+            <!-- Interests-->
+            @include('guest.components.guest_interests');
             <!-- Certi-->
             @include('guest.components.guest_certificate');
         </div>

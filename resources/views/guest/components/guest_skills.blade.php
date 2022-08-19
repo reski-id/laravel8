@@ -12,8 +12,12 @@
                         <li class="list-inline-item"><i class="fab fa-wordpress"></i></li>
                         <li class="list-inline-item"><i class="fab fa-python"></i></li>
                         <li class="list-inline-item"><i class="fab brands fa-bootstrap"></i></li>
-                        {{-- <i class="fa-brands fa-bootstrap"></i> --}}
+                        <li class="list-inline-item"><i class="fab brands fa-html5"></i></li>
+                        <li class="list-inline-item"><i class="fab brands fa-css3"></i></li>
+                        <li class="list-inline-item"><i class="fab brands fa-git"></i></li>
+                        <li class="list-inline-item"><i class="fab brands fa-trello"></i></li>
                     </ul>
+                    <br>
                     <div class="subheading mb-3">Workflow</div>
                     <ul class="fa-ul mb-0">
                         <li>
