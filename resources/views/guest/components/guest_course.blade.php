@@ -1,6 +1,7 @@
 <section class="resume-section" id="course">
     <div class="resume-section-content">
-        <h2 class="mb-5">Finish Course</h2>
+        <h2 class="mb-5">
+            Courses/Bootcamp</h2>
         <ul class="fa-ul mb-0">
             @foreach ($course as $item)
                 <li>

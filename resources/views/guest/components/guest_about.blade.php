@@ -1,6 +1,5 @@
 
 <section class="resume-section" id="about">
-
     <div class="resume-section-content">
         <h1 class="mb-0">
             Ahmad
@@ -13,7 +12,7 @@
         <p class="lead mb-5">
             I have experience in building applications using clean architecture and unit testing,.</p>
             <p>
-                <a target=”_blank” href="{{asset('sertificate.pdf')}}"> <button class="btn btn-success"> Get My CV <i class="fa fa-download" aria-hidden="true"></i></button></p>
+                <a target=”_blank” href="{{asset('data_cv/sertificate.pdf')}}"> <button class="btn btn-success"> Get My CV <i class="fa fa-download" aria-hidden="true"></i></button></p>
             <br>
         <div class="social-icons">
             <a class="social-icon" href="#!" target=”_blank”><i class="fab fa-linkedin-in"></i></a>

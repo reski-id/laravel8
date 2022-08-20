@@ -1,4 +1,4 @@
-@extends('guest.guest_app');
+@extends('guest.guest_app')
 
 @section('main')
 

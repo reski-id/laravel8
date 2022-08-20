@@ -10,6 +10,7 @@ use App\Http\Controllers\api\ProgrammingControllerAPI;
 use App\Http\Controllers\api\PortofolioControllerAPI;
 use App\Http\Controllers\api\CourseControllerAPI;
 use App\Http\Controllers\api\CourseCategControllerAPI;
+use App\Http\Controllers\api\UploadCVControllerAPI;
 
 /*
 |--------------------------------------------------------------------------
@@ -66,3 +67,10 @@ Route::get('/task', [TaskControllerAPI::class, 'index']);
 Route::get('/task/{id}', [TaskControllerAPI::class, 'show']);
 Route::put('/task/{id}', [TaskControllerAPI::class, 'edit']);
 Route::delete('/task/{id}', [TaskControllerAPI::class, 'destroy']);
+
+
+Route::post('cv', [UploadCVControllerAPI::class, 'store']);
+Route::get('cv', [UploadCVControllerAPI::class, 'index']);
+Route::get('cv/{id}', [UploadCVControllerAPI::class, 'show']);
+Route::put('cv/{id}', [UploadCVControllerAPI::class, 'edit']);
+Route::delete('cv/{id}', [UploadCVControllerAPI::class, 'destroy']);
