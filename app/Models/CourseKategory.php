@@ -14,4 +14,9 @@ class CourseKategory extends Model
     protected $fillable = [
         'kategory',
     ];
+
+    public function course()
+    {
+        return $this->belongsTo(Course ::class);
+    }
 }

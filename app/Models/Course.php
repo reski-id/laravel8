@@ -18,4 +18,9 @@ class Course extends Model
         'link_sertifikat',
         'kategory_course',
     ];
+
+    public function category()
+    {
+        return $this->hasMany(CourseKategory::class);
+    }
 }

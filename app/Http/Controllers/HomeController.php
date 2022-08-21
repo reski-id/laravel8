@@ -35,4 +35,9 @@ class HomeController extends Controller
     {
         return view('sertifikat');
     }
+
+    public function admin()
+    {
+        return view('admin');
+    }
 }

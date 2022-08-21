@@ -61,7 +61,7 @@ Route::delete('/projects/{id}', [PortofolioController::class, 'destroy']);
 
 //pages controller
 Route::get('/', [HomeController::class, 'index']);
-// Route::get('/about', [HomeController::class, 'about']);
+Route::get('/home', [HomeController::class, 'admin']);
 // Route::get('/portofolio', [HomeController::class, 'portofolio']);
 // Route::get('/sertifikat', [HomeController::class, 'sertifikat']);
 
